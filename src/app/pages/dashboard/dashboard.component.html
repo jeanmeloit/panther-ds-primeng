@@ -1,0 +1,27 @@
+<pds-default-page
+  [mainTitle]="'ABC one two three'"
+  [spinnerActive]="loading"
+  [spinnerStatus]="'info'"
+  [topRightButtonVisible]="true"
+  [topRightButtonIconVisible]="true"
+  [topRightButtonIcon]="'fas fa-arrow-left'"
+  [topRightButtonId]="'update-user-list'"
+  [topRightButtonAppearance]="'ghost'"
+  [topRightButtonTitle]="'Voltar para a lista'"
+  (topRightButtonEmitter)="(null)"
+  [rightApproveButtonVisible]="true"
+  [rightApproveButtonIconVisible]="true"
+  [rightApproveButtonIcon]="'fas fa-map-marker'"
+  [rightApproveButtonId]="'do-checkin'"
+  [rightApproveButtonAppearance]="'filled'"
+  [rightApproveButtonText]="'Checkin'"
+  [rightApproveButtonTitle]="'Fazer checkin'"
+  (rightApproveButtonEmitter)="(null)"
+>
+  <pds-p-button
+    [text]="'Minha mãe'"
+    icon="pi pi-check"
+    iconPosition="left"
+    size="small"
+  ></pds-p-button>
+</pds-default-page>

@@ -1,0 +1,15 @@
+<pds-default-page
+  [mainTitle]="pageTitle"
+  [spinnerActive]="class.loading"
+  [spinnerStatus]="'info'"
+  [topRightButtonVisible]="true"
+  [topRightButtonIconVisible]="true"
+  [topRightButtonIcon]="'fas fa-sync'"
+  [topRightButtonId]="'update-class-list'"
+  [topRightButtonTitle]="'Atualizar'"
+  (topRightButtonEmitter)="class.fetchGrid()"
+>
+  <ng-container>
+    <pds-class-grid #class></pds-class-grid>
+  </ng-container>
+</pds-default-page>
