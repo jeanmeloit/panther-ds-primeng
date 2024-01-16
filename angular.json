@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pa-mba-front-end": {
+    "pds-prime-ng": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -141,15 +141,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "pa-mba-front-end:build",
+            "browserTarget": "pds-prime-ng:build",
             "port": 3570
           },
           "configurations": {
             "production": {
-              "browserTarget": "pa-mba-front-end:build:production"
+              "browserTarget": "pds-prime-ng:build:production"
             },
             "development": {
-              "browserTarget": "pa-mba-front-end:build:development"
+              "browserTarget": "pds-prime-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -157,7 +157,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pa-mba-front-end:build"
+            "browserTarget": "pds-prime-ng:build"
           }
         },
         "test": {
@@ -209,14 +209,14 @@
           "options": {
             "prerender": false,
             "ssr": false,
-            "browserTarget": "pa-mba-front-end:build:production",
+            "browserTarget": "pds-prime-ng:build:production",
             "firebaseProject": "panther-checkin-control",
             "firebaseHostingSite": "panther-checkin-control"
           }
         }
       }
     },
-    "pa-mba-front-end-e2e": {
+    "pds-prime-ng-e2e": {
       "root": "",
       "sourceRoot": "",
       "projectType": "application",
@@ -225,7 +225,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "pa-mba-front-end:serve"
+            "devServerTarget": "pds-prime-ng:serve"
           }
         },
         "lint": {
@@ -238,7 +238,7 @@
       }
     }
   },
-  "defaultProject": "pa-mba-front-end",
+  "defaultProject": "pds-prime-ng",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "pds",
@@ -246,6 +246,12 @@
     },
     "@schematics/angular:directive": {
       "prefix": "pds"
+    },
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
     }
   }
 }

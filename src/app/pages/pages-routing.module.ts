@@ -48,6 +48,11 @@ const routes: Routes = [
             m => m.MiscellaneousModule,
           ),
       },
+      {
+        path: 'perfil',
+        loadComponent: () =>
+          import('./profile/profile.component').then(m => m.ProfileComponent),
+      },
       { path: '**', redirectTo: 'outros', pathMatch: 'full' },
     ],
   },

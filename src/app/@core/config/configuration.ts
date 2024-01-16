@@ -49,7 +49,7 @@ export const ProjectConfiguration: Configuration = {
       },
     ],
     userMenu: [
-      { title: 'Perfil', icon: { icon: 'user', pack: 'fas' } },
+      { title: 'Perfil', icon: { icon: 'user', pack: 'fas' }, link: 'perfil' },
       { title: 'Nova janela', icon: 'browser-outline' },
       {
         title: 'Tema',
@@ -133,8 +133,8 @@ export const ProjectConfiguration: Configuration = {
     twitterLink: '#',
   },
   enviroment: {
-    dev: 'http://localhost:3000',
-    homolog: 'http://localhost:3000',
+    dev: 'https://po-mba-back-end-jean.onrender.com',
+    homolog: 'https://po-mba-back-end-jean.onrender.com',
     prod: 'https://po-mba-back-end-jean.onrender.com',
   },
   backoffice: {

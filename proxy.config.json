@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://po-mba-back-end-jean.onrender.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

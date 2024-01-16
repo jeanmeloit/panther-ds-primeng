@@ -1,0 +1,35 @@
+<pds-default-page *ngIf="user$ | async as user" [mainTitle]="user.name">
+  <div class="row">
+    <div class="col-sm-12 col-md-3 col-lg-3 divider-border-right">
+      <div class="profile-picture">
+        <img
+          [src]="profileImageUrl"
+          alt="Profile Image"
+          *ngIf="profileImageUrl"
+        />
+        <input
+          type="file"
+          (change)="onFileSelected($event)"
+          class="upload-input"
+        />
+        <label for="upload-input" class="upload-button">
+          <i class="fas fa-upload"></i
+        ></label>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-9 col-lg-9">
+      <p><b>E-mail:</b> {{ user.email }}</p>
+      <p><b>Telefone:</b> {{ user.phone }}</p>
+      <p><b>Idade:</b> {{ user.age }}</p>
+      <p>
+        <b>Acesso liberado até:</b>
+        {{ user.canAccessTill | date : 'dd/MM/YYYY hh:mm:ss' }}
+      </p>
+      <p>
+        <b>Ultíma atualização:</b>
+        {{ user.updatedAt | date : 'dd/MM/YYYY hh:mm:ss' }}
+      </p>
+    </div>
+  </div>
+</pds-default-page>
